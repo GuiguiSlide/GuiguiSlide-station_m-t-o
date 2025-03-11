@@ -73,4 +73,3 @@ function sun(){
 }
 
 setInterval('autoRefresh()', 10000);//reload automatique
-//<!--réalisé par les dia1 2025 (tom,rosy,guillaume,téo)-->//

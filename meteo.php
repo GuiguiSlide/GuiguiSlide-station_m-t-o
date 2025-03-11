@@ -66,4 +66,3 @@
 
     include 'index.html';
 ?>
-<!--réalisé par les dia1 2025 (tom,rosy,guillaume,téo)-->

@@ -101,4 +101,3 @@ void timerCallback() {
     Serial.println("FAIL(" + String(connectRetryCount++) + ")");
   }
 }
-//<!--réalisé par les dia1 2025 (tom,rosy,guillaume,téo)-->//
