@@ -98,7 +98,7 @@ function showTime(){
     var time = h + ":" + m + ":" + s + " ";
     document.getElementById("MyClockDisplay").innerText = time;
     document.getElementById("MyClockDisplay").textContent = time;
-    setTimeout(showTime, 1000);
+    setTimeout(showTime, 2000);
 }
 
 function time_of_day(){
