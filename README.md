@@ -5,7 +5,7 @@ réalisé par guillaume, teo, rosy, tom
     .sync température entre l'appareil et le site en utilisant la db
     ."" pareil pour l'humidité
     .background qui hange en fonction du temps et de l'heure
-    .
+    .ip sur l'ecran de la machine
     .
     .
     .
