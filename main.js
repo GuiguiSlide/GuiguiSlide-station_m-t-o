@@ -38,6 +38,7 @@ function logomode() {
     if (imgElement) {
         imgElement.src = IsLogoMoon ? '/moon.png' : '/sun.png';
     }
+    
 }
 
 function RAIN(){

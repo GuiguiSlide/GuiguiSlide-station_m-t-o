@@ -9,3 +9,9 @@ réalisé par guillaume, teo, rosy, tom
     .
     .
     .
+-fait
+    .interface 
+    .background qui change en appuiant sur un bouton
+    .auto reload de la page pour voir les update en temps reel 
+    .pluie
+    .
