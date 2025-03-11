@@ -13,7 +13,7 @@ body {
     background-size: cover;
 }
 
-.clock  {
+.clock {
     display: flex;
     justify-content: center;
     top: 10px; 
