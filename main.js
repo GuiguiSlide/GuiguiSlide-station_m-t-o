@@ -72,4 +72,18 @@ function sun(){
     badWeather();
 }
 
-setInterval('autoRefresh()', 10000);//reload automatique
+function checkingtempwet(){
+    const rain = document.getElementById("raining");
+    const warmth = document.getElementById("warmth");
+    const WET = document.getElementById("wet");
+    
+    if (warmth.innerHTML <='🌡️20°C'){
+        if (WET.innerHTML >='💧50%'){
+            rain.classList.add("riskofrain");
+        }
+    }
+}
+
+
+setInterval('autoRefresh()', 1000);//reload automatique
+setInterval('checkingtempwet()', 1);

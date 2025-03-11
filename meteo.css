@@ -8,7 +8,9 @@ body {
     height: 100vh;
     margin-top: -25px;
     padding: 0;
-    background: linear-gradient(120deg,rgb(227, 246, 255),rgb(139, 205, 255), rgb(227, 246, 255)) 
+    background: linear-gradient(120deg,rgb(227, 246, 255),rgb(139, 205, 255), rgb(227, 246, 255)); 
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /*TITLE*/
@@ -53,10 +55,15 @@ h1 {
     font-family: "Open Sans", sans-serif;
     color: white;
     font-size: 1.5rem;
-    border-radius: 40%;
-    padding: 4rem;
+    border-radius: 100%;
+    padding: auto;
     box-shadow: 15px 10px 10px #0b0a0a6d;
     border: 5px solid white;
+    height: 12rem;
+    width: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .temperature {
@@ -65,10 +72,15 @@ h1 {
     font-family: "Open Sans", sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
-    border-radius: 40%;
-    padding: 4rem;
+    border-radius: 100%;
+    padding: auto;
     box-shadow: 15px 10px 10px #0b0a0a6d;
     border: 5px solid white;
+    height: 12rem;
+    width: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .list_horizontale{
@@ -96,6 +108,14 @@ h1 {
 
 .riskofrain{
     background-image: url(https://s.w-x.co/ads/creatives/homedepot/bwbb/bg_l_rain_animation_homedepot5.gif);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fog {
+    background: url(https://i.gifer.com/9vZI.gif);
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
@@ -155,20 +175,42 @@ h1 {
     .body{
         transform: translateX(-100%);
         transition: transform 0.3s ease-in-out;
+        padding: 0;
         position: fixed;
         width: 100%;
-        height: 100vh;
+        height: auto;
         background: white;
     }
 
+    .h1 {
+        max-width: 90%;
+        font-size: 1.2rem;
+        padding: 1rem;
+        margin-top: 20px;
+    }
+
+    .logo img {
+        width: 4rem;
+        margin-bottom: 1rem;
+    }
+
+    .humidité,
+    .temperature {
+        width: 60px;
+        height: 60px;
+        padding: 0.5rem;
+        font-size: 1rem;
+        box-shadow: 10px 8px #0b0a0a6d;
+    }
+
     .moon {
-        margin-left:90%; /* Ajuste la position de la lune */
+        margin-bottom: 2rem;
         width: 70px;
         height: 70px;
     }
 
     .sun {
-        margin-left: 90%; /* Ajuste la position du soleil sur des petits écrans */
+        margin-bottom: 2rem; 
         width: 120px;
         height: 120px;
     }    

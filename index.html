@@ -11,13 +11,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Dangrek&family=Delius+Unicase:wght@400;700&family=Dokdo&family=Fascinate+Inline&family=Honk&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jersey+10&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Megrim&family=Molle&family=Noto+Sans+PhagsPa&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+AU+SA:wght@100..400&family=Playwrite+AU+VIC+Guides&family=Playwrite+IN:wght@100..400&family=Press+Start+2P&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sigmar&family=Sixtyfour&family=Tilt+Prism&family=Train+One&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div id="raining" class='riskofrain'>
+  <div id="raining" class=''>
     <div id="shiningobj" class='sun'></div>
     <h1><p>Station Météo</p></h1>   
     <br><br>
       <div class="list_horizontale">
         <div class="temperature">
-          <a>🌡️ -- °C</a>
+          <a id="warmth">🌡️20°C</a>
         </div>
         <div>
           <a class="logo" onclick="nightmode(), toggleActive(this), sun(), RAIN()">
@@ -25,7 +25,7 @@
           </a>
         </div>
         <div class="humidité">
-          <a>💧 -- %</a>
+          <a id="wet">💧60%</a>
         </div>
       </div>
     </br></br>
@@ -34,7 +34,7 @@
         La drogue est un problème majeur dans la société, causant de nombreux dommages sur la santé et le bien-être des individus. Elle entraîne une dépendance physique et psychologique, rendant difficile l’arrêt de la consommation. Les effets secondaires incluent des troubles du comportement, des pertes de mémoire et des maladies graves. L’usage de drogues peut aussi provoquer des accidents, car il altère les réflexes et le jugement. Sur le plan social, la toxicomanie détruit les relations familiales et amicales. Elle favorise la criminalité et la marginalisation des consommateurs. De plus, la production et le trafic de drogue alimentent des réseaux illégaux dangereux. Les coûts médicaux liés aux traitements des addictions sont élevés et pèsent sur les systèmes de santé. La drogue nuit aussi aux performances scolaires et professionnelles, menant souvent à la précarité. Elle peut provoquer des overdoses mortelles, mettant fin à des vies prématurément. La prévention et l’éducation sont essentielles pour limiter ce fléau.
       </p>
     </div>
-    <button onclick="RAIN()">RAIN</button>
+    <button onclick="checkingtempwet()">RAIN</button>
     <button onclick="sun()">sun</button>
   </div><!--the final countdiv-->
   
