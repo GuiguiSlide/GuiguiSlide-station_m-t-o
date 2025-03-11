@@ -77,7 +77,6 @@ h1 {
     align-items: center;
     justify-content: space-evenly;
 }
-
 .ipcontainer{
     display: flex;
     justify-content: center;
@@ -125,6 +124,7 @@ h1 {
     }
 
 }
+
 .moon{
     margin-top: 1%;
     margin-left: 90%;
@@ -136,6 +136,7 @@ h1 {
     border-radius: 50%;
     box-shadow: 0 0 1px #ffffff;
     animation: moonshine 2s ease-in-out infinite;
+    z-index: -1;
 }
 
 @keyframes moonshine {
@@ -159,4 +160,16 @@ h1 {
         height: 100vh;
         background: white;
     }
+
+    .moon {
+        margin-left:90%; /* Ajuste la position de la lune */
+        width: 70px;
+        height: 70px;
+    }
+
+    .sun {
+        margin-left: 90%; /* Ajuste la position du soleil sur des petits écrans */
+        width: 120px;
+        height: 120px;
+    }    
 }

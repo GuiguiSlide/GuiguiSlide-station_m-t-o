@@ -1,6 +1,7 @@
 let IsLogoMoon = false;
 let isNight = false;
 let rain = false;
+let isBad = false;
 let israin = false;
 let issun = false;
 
@@ -11,6 +12,8 @@ function autoRefresh() {
 function nightmode() {
     isNight =! isNight;
 
+    const obj = document.getElementById("shiningobj");
+
     document.body.style.background = isNight
         ? "linear-gradient(to right, #2c3e50,rgb(76, 161, 175))"  // Night colors
         : "linear-gradient(to right,rgb(227, 246, 255),rgb(139, 205, 255)"; // Day colors
@@ -18,18 +21,26 @@ function nightmode() {
         document.querySelector("h1").style.background = isNight
         ? " #2c3e50"
         : "#3398ff";
+        if (isNight == true){
+            obj.classList.remove("sun");
+            obj.classList.add("moon");
+        }
+        if (isNight == false) {
+            obj.classList.remove("moon");
+            obj.classList.add("sun");
+        }
 }
 
 function badWeather(){
     isBad =! isBad;
     
     document.body.style.background = isBad
-    ? "linear-gradient(to right, #2c3e50,rgb(75, 87, 89))"
-    : "linear-gradient(to right,rgb(122, 132, 143),rgb(195, 195, 195))";
+    ?"linear-gradient(to right,rgb(122, 132, 143),rgb(195, 195, 195))"
+    : "linear-gradient(to right,rgb(227, 246, 255),rgb(139, 205, 255)"; // Day colors
 
     document.querySelector("h1").style.background = isBad
     ? "rgb(97, 102, 106)"
-    : "#65717d";
+    : "#3398ff";
 }
 
 function logomode() {
@@ -58,19 +69,7 @@ function RAIN(){
 }
 
 function sun(){
-    if (issun == true){
-        issun = false;
-    }else{
-        issun = true;
-    }
-    const obj = document.getElementById("shiningobj");
-    var shining=obj.class
-    if (issun == true){
-        obj.classList.remove("sun");
-    }
-    if (issun == false) {
-        obj.classList.add("sun");
-    }
+    badWeather();
 }
 
 setInterval('autoRefresh()', 10000);//reload automatique
