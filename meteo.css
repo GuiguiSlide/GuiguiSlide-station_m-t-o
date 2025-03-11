@@ -132,7 +132,7 @@ h1 {
 
 .sun{
     margin-top: 1%;
-    margin-left: 84%;
+    margin-left: 84%;   
     position: absolute;
     z-index: -1;
     width: 200px;
@@ -231,8 +231,8 @@ h1 {
         z-index: -1;
         width: 200px;
         height: 200px;
-        background: #ffdd50;
+        background: #ff5050;
         border-radius: 50%;
-        box-shadow: 0 0 10px #ffdd50;
+        box-shadow: 0 0 10px #ffcc00;
     }    
 }
