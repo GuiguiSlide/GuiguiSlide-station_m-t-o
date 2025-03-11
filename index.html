@@ -12,34 +12,29 @@
 </head>
 <body>
   <div id="badweather">
-  <div id="raining" class=''>
-    <div id="shiningobj" class='sun'></div>
-    <h1><p>Station Météo</p></h1>   
-    <br><br>
-      <div class="list_horizontale">
-        <div class="temperature">
-          <a id="warmth">🌡️</a>
-        </div>
-        <div>
-          <a class="logo" onclick="nightmode(), toggleActive(this), sun(), RAIN()">
-            <img src="/sun.png" onclick='logomode()'>
-          </a>
-        </div>
-        <div class="humidité">
-          <a id="wet">💧</a>
-        </div>
+    <div id="raining" class=''>
+      <div id="shiningobj" class='sun'></div>
+      <h1><p>Station Météo</p></h1>   
+        <br><br>
+          <div class="list_horizontale">
+            <div class="temperature">
+              <a id="warmth">🌡️</a>
+            </div>
+            <div>
+              <a class="logo" onclick="nightmode(), toggleActive(this), sun(), RAIN()">
+                <img src="/sun.png" onclick='logomode()'>
+              </a>
+            </div>
+            <div class="humidité">
+              <a id="wet">💧</a>
+            </div>
+          </div>
+        </br></br>
       </div>
-    </br></br>
-    <div class="ipcontainer">
-      <p class="ip" hidden>
-        La drogue est un problème majeur dans la société, causant de nombreux dommages sur la santé et le bien-être des individus. Elle entraîne une dépendance physique et psychologique, rendant difficile l’arrêt de la consommation. Les effets secondaires incluent des troubles du comportement, des pertes de mémoire et des maladies graves. L’usage de drogues peut aussi provoquer des accidents, car il altère les réflexes et le jugement. Sur le plan social, la toxicomanie détruit les relations familiales et amicales. Elle favorise la criminalité et la marginalisation des consommateurs. De plus, la production et le trafic de drogue alimentent des réseaux illégaux dangereux. Les coûts médicaux liés aux traitements des addictions sont élevés et pèsent sur les systèmes de santé. La drogue nuit aussi aux performances scolaires et professionnelles, menant souvent à la précarité. Elle peut provoquer des overdoses mortelles, mettant fin à des vies prématurément. La prévention et l’éducation sont essentielles pour limiter ce fléau.
-      </p>
+      <button onclick="RAIN()">RAIN</button>
+      <button onclick="sun()">sun</button>
+      <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
     </div>
-    <button onclick="RAIN()">RAIN</button>
-    <button onclick="sun()">sun</button>
-    <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
-  </div>
   </div><!--the final countdiv-->
-  
   <script src="main.js"></Script>
 </body>

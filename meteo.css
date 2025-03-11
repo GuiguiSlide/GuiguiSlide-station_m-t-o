@@ -13,6 +13,16 @@ body {
     background-size: cover;
 }
 
+.clock  {
+    display: flex;
+    justify-content: center;
+    top: 10px; 
+    left: "10px"; 
+    font-size: 1.5rem; 
+    font-family: "Open Sans", sans-serif;
+    text-align: left;
+}
+
 /*TITLE*/
 h1 {
     background: #3398ff;
