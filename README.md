@@ -2,10 +2,8 @@
 projet de dia1, faire une station meteo réalisé par un groupe de 4 personnes
 réalisé par guillaume, teo, rosy, tom
 -a réaliser:
-    .sync température entre l'appareil et le site en utilisant la db
-    ."" pareil pour l'humidité
-    .background qui hange en fonction du temps et de l'heure
-    .ip sur l'ecran de la machine
+    .ajouter l'heure sur l'ecran de la machine
+    .mettre la tsation meteo sur la baie
 -fait
     .interface 
     .background qui s'adapte a la température
@@ -13,4 +11,8 @@ réalisé par guillaume, teo, rosy, tom
     .pluie
     .brouillard
     .soleil / lune
+    .ip sur l'ecran de la machine
+    .background qui hange en fonction du temps et de l'heure
+    .sync température entre l'appareil et le site en utilisant la db
+    ."" pareil pour l'humidité
     
