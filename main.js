@@ -5,8 +5,8 @@ let isBad = false;
 let israin = false;
 let issun = false;
 
-function autoRefresh() {
-    window.location = window.location.href;
+function reloadPage() {
+    location.reload();  // Recharger la page entière
 }
 
 function nightmode() {
@@ -98,10 +98,12 @@ function showTime(){
     var time = h + ":" + m + ":" + s + " ";
     document.getElementById("MyClockDisplay").innerText = time;
     document.getElementById("MyClockDisplay").textContent = time;
-    setTimeout(showTime, 2000);
+    setTimeout(showTime, 1000);
 }
 
+
 function time_of_day(){
+    var date = new Date();
     var h = date.getHours();
     if(h<=19){
         if(h>=8){
@@ -113,7 +115,18 @@ function time_of_day(){
         document.body.style.background ="linear-gradient(to right,rgb(227, 246, 255),rgb(139, 205, 255),rgb(227, 246, 255)"
     }
 }
+
+function refresh(){
+    let mesures=document.getElementById("mesures");
+    mesures.innerHTML=`resr`;
+    console.log("blabla");        
+}
+
+
 showTime();
-setInterval('autoRefresh()', 1000000);//reload automatique
+refresh();
+setInterval(reloadPage, 10000);
 setInterval('checkingtempwet()', 1);
 setInterval('time_of_day()',1);
+
+

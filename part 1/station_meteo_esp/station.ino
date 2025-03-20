@@ -421,7 +421,7 @@ void handleNotFound() {
 void setup() {
   Serial.begin(115200);
   dht.begin();
-  delay(2000); // Attente de stabilisation du capteur
+  delay(2000); // Attente de stabilisation du capteur 
 
   // 📡 Démarrage du Wi-Fi
   WiFi.softAP(ssid, password);
