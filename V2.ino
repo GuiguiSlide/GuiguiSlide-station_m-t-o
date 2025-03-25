@@ -2,13 +2,10 @@
 #include <HTTPClient.h>
 #include <DHT.h>
 #include <LiquidCrystal.h>
-#include <NTPClient.h>
-#include <WiFiUdp.h>
-
 
 // Paramètres du réseau Wi-Fi
 const char* ssid = "iPhone 14 PRO de Téo";
-const char* password = "DexlaZ29";
+const char* password = "DexlaZ29"; 
 const int rs = 16, en = 17, d4 = 5, d5 = 18, d6 = 19, d7 = 21;
 int temp;
 int hum; 
@@ -22,11 +19,6 @@ LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 #define DHTTYPE DHT22
 DHT dht(DHTPIN, DHTTYPE);
 
-WiFiUDP ntpUDP;
-NTPClient timeClient(ntpUDP);
-String formattedDate;
-String dayStamp;
-String timeStamp;
 
 const char* serverName = "http://172.20.10.3/relevee.php"; 
 
@@ -102,13 +94,6 @@ void setup() {
     } else {
         Serial.println("\nÉchec de connexion WiFi !");
     }
-    timeClient.begin();
-  // Set offset time in seconds to adjust for your timezone, for example:
-  // GMT +1 = 3600
-  // GMT +8 = 28800
-  // GMT -1 = -3600
-  // GMT 0 = 0
-  timeClient.setTimeOffset(3600);
 }
 
 
@@ -116,9 +101,10 @@ void loop() {
 
     lcd.setCursor(0, 1);
     lcd.print(tempe);
-    lcd.print("C ");
+    lcd.print("C  ");
     lcd.print(humi);
-    lcd.print("H% ");
+    lcd.print("H%");
+
     
     float temperature = dht.readTemperature();
     float humidite = dht.readHumidity();
@@ -129,18 +115,6 @@ void loop() {
     } else {
         Serial.println("Erreur de lecture du capteur !");
     }
-    struct tm timeinfo;
-    if (!getLocalTime(&timeinfo)) {
-        Serial.println("Failed to obtain time");
-    }
-    while(!timeClient.update()) {
-    timeClient.forceUpdate();
-    }
-    formattedDate = timeClient.getFormattedTime();
-    int splitT = formattedDate.indexOf("T");
-    timeStamp = formattedDate.substring(splitT+1, formattedDate.length()-1);
-    lcd.print(timeStamp);
-    lcd.setCursor(14, 1);
-    lcd.print("  ");
+
     delay(10000); 
 }
