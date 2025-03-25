@@ -21,7 +21,7 @@ if (isset($_POST["temperature"]) && isset($_POST["humidite"])) {
     $humidite = $_POST["humidite"];
 
     // Prépare la requête pour éviter les injections SQL
-    $stmt = $conn->prepare("INSERT INTO mesures (temperature, humidity) VALUES (?, ?)");
+    $stmt = $conn->prepare("INSERT INTO mesures (temperature, humidite) VALUES (?, ?)");
     $stmt->bind_param("dd", $temperature, $humidite);
 
     if ($stmt->execute()) {

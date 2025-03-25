@@ -12,8 +12,8 @@ const char* password = "DexlaZ29";
 const int rs = 16, en = 17, d4 = 5, d5 = 18, d6 = 19, d7 = 21;
 int temp;
 int hum; 
-int tempe;
-int humi;
+float tempe;
+float humi;
 
 LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 
@@ -136,7 +136,7 @@ void loop() {
     while(!timeClient.update()) {
     timeClient.forceUpdate();
     }
-    formattedDate = timeClient.getFormattedDate();
+    formattedDate = timeClient.getFormattedTime();
     int splitT = formattedDate.indexOf("T");
     timeStamp = formattedDate.substring(splitT+1, formattedDate.length()-1);
     lcd.print(timeStamp);

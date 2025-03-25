@@ -11,7 +11,7 @@ if ($conn->connect_error) {
     die("Connexion échouée : " . $conn->connect_error);
 }
 
-$sql = "SELECT temperature, humidity, DATE_FORMAT(horodatage, '%d-%m-%Y %H:%i:%s') AS horodatage FROM mesures ORDER BY horodatage DESC LIMIT 10";
+$sql = "SELECT temperature, humidite, DATE_FORMAT(horodatage, '%d-%m-%Y %H:%i:%s') AS horodatage FROM mesures ORDER BY horodatage DESC LIMIT 10";
 $result = $conn->query($sql);
 
 if (!$result) {
@@ -24,7 +24,7 @@ $horodatages = [];
 
 while ($row = $result->fetch_assoc()) {
     $temperatures[] = $row['temperature'];
-    $humidities[] = $row['humidity'];
+    $humidities[] = $row['humidite'];
     $horodatages[] = $row['horodatage'];
 }
 
@@ -39,7 +39,7 @@ $last_temperature = $temperatures[0];
 $last_humidity = $humidities[0];
 
 
-$temperature_threshold = 32;  
+$temperature_threshold = 30;  
 $humidity_threshold = 80;     
 
 
@@ -62,7 +62,7 @@ if ($last_temperature > $temperature_threshold || $last_humidity > $humidity_thr
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Station Météo RTGT</title>
-    <link rel="stylesheet" type="text/css" href="meteo.css">
+    <link rel="stylesheet" type="text/css" href="meteo1.css">
 
     <!-- Inclusion de Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

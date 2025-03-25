@@ -2,9 +2,8 @@
 projet de dia1, faire une station meteo réalisé par un groupe de 4 personnes
 réalisé par guillaume, teo, rosy, tom
 -a réaliser:
+-fait:
     .ajouter l'heure sur l'ecran de la machine
-    .mettre la tsation meteo sur la baie
--fait
     .interface 
     .background qui s'adapte a la température
     .auto reload de la page pour voir les update en temps reel 
