@@ -21,4 +21,4 @@ projet de dia1, faire une station meteo réalisé par un groupe de 4 personnes a
      - sync température entre l'appareil et le site en utilisant la db
      - "" pareil pour l'humidité
   # vue du site
-  ![preview](https://github.com/GuiguiSlide/projet_gamejam_2025_cesi/blob/main/imgs/towers.pn)
+  ![preview]([https://github.com/GuiguiSlide/projet_gamejam_2025_cesi/blob/main/imgs/towers.pn](https://github.com/GuiguiSlide/GuiguiSlide-station_m-t-o/blob/main/picture%201.png))
